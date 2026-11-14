@@ -39,8 +39,8 @@
 ;; Angle-mods can be enabled here, i.e. ZXCVB can be shifted to the left.
 ;; More details here: https://colemakmods.github.io/ergonomic-mods/angle.html
 
-(include defsrc/layout.kbd)                ;; standard finger assignment
-;; (include defsrc/layout_anglemod.kbd)       ;; ZXCVB are shifted to the left
+;; (include defsrc/layout.kbd)                ;; standard finger assignment
+(include defsrc/layout_anglemod.kbd)       ;; ZXCVB are shifted to the left
 ;; (include defsrc/layout_wide_anglemod.kbd)  ;; angle-mod + right hand shifted by one key
 
 
@@ -58,9 +58,9 @@
 ;;    - the left thumb key becomes Shift
 ;;    - SDF/JKL become Meta/Ctrl/Alt when held
 
-(include defcfg/flavor_ez.kbd)    ;; standard keyboard behavior
+;; (include defcfg/flavor_ez.kbd)    ;; standard keyboard behavior
 ;; (include defcfg/flavor_tt.kbd)    ;; thumb taps
-;; (include defcfg/flavor_hrm.kbd)   ;; thumb taps + home row mods
+(include defcfg/flavor_hrm.kbd)   ;; thumb taps + home row mods
 
 
 ;;-----------------------------------------------------------------------------
@@ -70,11 +70,11 @@
 ;; keyboard layout, i.e. the layout defined in your system settings.
 ;; Pick your aliases accordingly below.
 
-(include defalias/qwerty.kbd)
+;; (include defalias/qwerty.kbd)
 ;; (include defalias/qwertz.kbd)
 ;; (include defalias/azerty.kbd)
 ;; (include defalias/lafayette.kbd)
-;; (include defalias/ergol.kbd)
+(include defalias/ergol.kbd)
 ;; (include defalias/bepo.kbd)
 
 
@@ -130,8 +130,8 @@
 ;;-----------------------------------------------------------------------------
 ;; Triggered by Sym+Shift.
 
-(include deflayer/numpad.kbd)  ;; right-hand numpad, like on the default Navigation layer
-;; (include deflayer/numrow.kbd)  ;; numbers on the home row, Shift+numbers on the top row
+;; (include deflayer/numpad.kbd)  ;; right-hand numpad, like on the default Navigation layer
+(include deflayer/numrow.kbd)  ;; numbers on the home row, Shift+numbers on the top row
 
 
 ;;-----------------------------------------------------------------------------
@@ -139,8 +139,8 @@
 ;;-----------------------------------------------------------------------------
 ;; Triggered by a long press on the spacebar.
 
-(include deflayer/navigation.kbd)      ;; arrows on ESDF, NumPad under the right hand
-;; (include deflayer/navigation_vim.kbd)  ;; arrows on HJKL, advanced keys under the left hand
+;; (include deflayer/navigation.kbd)      ;; arrows on ESDF, NumPad under the right hand
+(include deflayer/navigation_vim.kbd)  ;; arrows on HJKL, advanced keys under the left hand
 
 
 ;;-----------------------------------------------------------------------------

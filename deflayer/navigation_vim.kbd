@@ -12,11 +12,12 @@
   XX   @cls bck  fwd  XX    @v-   home pgdn pgup end  @lck @b-  @b+
   @all @sav S-tab tab XX    @v0   lft  down up   rght XX   _
   @ndo @cut @cpy @pst @rdo   _    @mwl @mwd @mwu @mwr XX
-            del              _              @fun
+            @del              _              @fun
 )
 
 ;; Mouse wheel emulation
 (defalias
+  del (tap-hold-press $QUICK_TAP $HOLDING_TERM del lsft)
   mwu (mwheel-up    50 120)
   mwd (mwheel-down  50 120)
   mwl (mwheel-left  50 120)

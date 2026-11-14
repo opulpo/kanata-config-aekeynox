@@ -20,12 +20,12 @@
   ;; Minimum press time (ms) for "tap-preferred" dual keys: Nav and homerow mods.
   ;; Below this value, these keys just produce Space or a homerow letter.
   ;; Keep this value high if you struggle with home row mods.
-  TAPPING_TERM 300
+  TAPPING_TERM 250
 
   ;; Maximum press time (ms) for "hold-preferred" dual keys: Enter and Backspace.
   ;; Above this value, these keys just behave as modifiers (Shift and Symbols).
   ;; Keep this value low if you trigger Enter by mistake.
-  HOLDING_TERM 150
+  HOLDING_TERM 180
 
   ;; Maximum time (ms) for a double key press to enable repetitions.
   QUICK_TAP 200

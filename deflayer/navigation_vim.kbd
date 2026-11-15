@@ -8,16 +8,24 @@
 
 (deflayer navigation
   lrld
-  f1   f2   f3   f4   f5    @v+   f6   f7   f8   f9   f10  f11  f12
-  XX   @cls bck  fwd  XX    @v-   home pgdn pgup end  @lck @b-  @b+
-  @all @sav S-tab tab XX    @v0   lft  down up   rght XX   _
-  @ndo @cut @cpy @pst @rdo   _    @mwl @mwd @mwu @mwr XX
-            @del              _              @fun
+  f1   f2   f3   f4   f5      @v+   f6   f7    f8    f9   f10  f11  f12
+  XX   @cls @bck  @fwd  XX    @v-   home @wksl @wksr end  @lck @b-  @b+
+  @all @sav S-tab tab   XX    @v0   lft  down  up    rght XX   _
+  @ndo @cut @cpy @pst @rdo    _     @sel @mvl  @mvr  @ser XX
+            @del              _                @fun
 )
 
 ;; Mouse wheel emulation
 (defalias
   del (tap-hold-press $QUICK_TAP $HOLDING_TERM del lsft)
+  bck (fork bck (multi lsft @`) (lmet lalt))
+  fwd (fork fwd @` (lmet lalt))
+  wksl (fork pgdn pgup (lmet))
+  wksr (fork pgup pgdn (lmet))
+  sel S-C-lft
+  ser S-C-rght
+  mvl C-lft
+  mvr C-rght
   mwu (mwheel-up    50 120)
   mwd (mwheel-down  50 120)
   mwl (mwheel-left  50 120)
